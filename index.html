@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#080b16">
+  <title>BASIT: SHADOW HUNT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="hud-row">
+        <div class="stat"><span>❤️</span><b id="lives">3</b></div>
+        <div class="stat"><span>⭐</span><b id="score">0</b></div>
+        <div class="stat"><span>🪙</span><b id="coins">0</b></div>
+        <div class="stat"><span>LV</span><b id="level">1</b></div>
+      </div>
+      <div class="bar-wrap"><div id="levelBar" class="bar"></div></div>
+      <div id="powerText"></div>
+      <button id="pauseBtn" class="small-btn">Ⅱ</button>
+    </div>
+
+    <section id="menu" class="screen">
+      <div class="panel">
+        <div class="logo">BASIT</div>
+        <div class="subtitle">SHADOW HUNT</div>
+        <p class="tagline">Survive the shadows. Hunt the darkness.</p>
+        <div class="menu-stats">
+          <span>BEST <b id="menuBest">0</b></span>
+          <span>COINS <b id="menuCoins">0</b></span>
+        </div>
+        <button id="playBtn" class="main-btn">PLAY</button>
+        <button id="howBtn" class="main-btn secondary">HOW TO PLAY</button>
+        <button id="soundBtn" class="main-btn secondary">🔊 SOUND ON</button>
+      </div>
+    </section>
+
+    <section id="how" class="screen hidden">
+      <div class="panel instructions">
+        <div class="title">HOW TO PLAY</div>
+        <p>🎮 Move BASIT with the joystick.</p>
+        <p>⚡ Press ATTACK to fire energy at the nearest shadow.</p>
+        <p>🪙 Collect coins for bonus points.</p>
+        <p>💎 Collect crystals to charge your power.</p>
+        <p>🛡️ Shield blocks damage for a short time.</p>
+        <p>🧲 Magnet pulls nearby coins and crystals.</p>
+        <p>💥 BLAST destroys enemies around BASIT.</p>
+        <p>👾 Survive longer as enemies become faster and stronger.</p>
+        <button id="backBtn" class="main-btn">BACK</button>
+      </div>
+    </section>
+
+    <section id="gameOver" class="screen hidden">
+      <div class="panel">
+        <div class="title">HUNT OVER</div>
+        <div id="newBest" class="new-best hidden">NEW BEST!</div>
+        <div class="results">
+          <div>SCORE <b id="finalScore">0</b></div>
+          <div>KILLS <b id="finalKills">0</b></div>
+          <div>COINS <b id="finalCoins">0</b></div>
+          <div>LEVEL <b id="finalLevel">1</b></div>
+        </div>
+        <button id="againBtn" class="main-btn">PLAY AGAIN</button>
+        <button id="menuBtn" class="main-btn secondary">MAIN MENU</button>
+      </div>
+    </section>
+
+    <div id="controls" class="hidden">
+      <div id="joystick" class="joystick">
+        <div id="stick"></div>
+      </div>
+      <button id="attackBtn" class="attack">⚡<span>ATTACK</span></button>
+      <button id="blastBtn" class="power">💥</button>
+    </div>
+
+    <div id="pauseOverlay" class="screen hidden">
+      <div class="panel">
+        <div class="title">PAUSED</div>
+        <button id="resumeBtn" class="main-btn">RESUME</button>
+        <button id="pauseMenuBtn" class="main-btn secondary">MAIN MENU</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
